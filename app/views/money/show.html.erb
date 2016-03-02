@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @money.amount %>
+</p>
+
+<p>
+  <strong>Deposit:</strong>
+  <%= @money.deposit %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @money.organization %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @money.date %>
+</p>
+
+<%= link_to 'Edit', edit_money_path(@money) %> |
+<%= link_to 'Back', money_index_path %>
