@@ -5,6 +5,14 @@ class MoneyController < ApplicationController
   # GET /money.json
   def index
     @money = Money.all
+    @balance = Money.balance.round(2)
+    @total_transactions = Money.total_transactions
+    @current_monthly_spent = Money.current_monthly_spent
+    @previous_monthly_spent = Money.previous_monthly_spent
+    @current_largest_spent_amount = Money.current_largest_spent_amount
+    @current_largest_spent_amount_id = Money.current_largest_spent_amount_id
+    @total_largest_spent_amount = Money.total_largest_spent_amount
+    @total_largest_spent_amount_org = Money.total_largest_spent_amount_org
   end
 
   # GET /money/1
@@ -52,10 +60,6 @@ class MoneyController < ApplicationController
   end
 
 
-
-
-
-
   # DELETE /money/1
   # DELETE /money/1.json
   def destroy
@@ -65,9 +69,6 @@ class MoneyController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-
-
 
 
   private

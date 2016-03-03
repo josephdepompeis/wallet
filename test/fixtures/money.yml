@@ -1,13 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  amount: 9.99
-  deposit: MyString
+  amount: 12.00
+  deposit: yes
   organization: MyString
   date: 2016-03-02
 
 two:
-  amount: 9.99
-  deposit: MyString
+  amount: 10.00
+  deposit: no
   organization: MyString
+  date: 2016-03-02
+
+three:
+  amount: 12.00
+  deposit: yes
+  organization: MyString
+  date: 2016-03-02
+
+four:
+  amount: 10.00
+  deposit: no
+  organization: Winner
   date: 2016-03-02

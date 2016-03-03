@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+<% unless @balance >= 0 %>
+<h1 style="background-color: red;font-weight:bold ">You are negative monies!</h1>
+<% end %>
+
+
 <h1>Listing Money</h1>
 
 <table>
@@ -31,3 +37,19 @@
 <br>
 
 <%= link_to 'New Money', new_money_path %>
+<% unless @balance >= 0 %>
+<h1 style="background-color: red;font-weight:bold ">You are negative monies!</h1>
+<% end %>
+
+<h1>Your transaction count is : <%= @total_transactions %> </h1>
+<br>
+<h1>Your current balance is : $<%= @balance %> </h1>
+<br>
+<h1>Amount you've spent this month is: $<%= @current_monthly_spent %> </h1>
+<h1>Amount you've spent last month was: $<%= @previous_monthly_spent %> </h1>
+<br>
+<h1>Your largest transaction amount this month was: $<%= @current_largest_spent_amount %> </h1>
+<h2>The ID for that transaction is :<%= @current_largest_spent_amount_id %> </h2>
+<br>
+<h1>Your largest transaction amount ever is: $<%= @total_largest_spent_amount %> </h1>
+<h2>The organization for that transaction is : <%= @total_largest_spent_amount_org %> </h2>
